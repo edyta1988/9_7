@@ -78,7 +78,7 @@ function newGame() {
     setGameElements(); //wywołanie funkcji gameState
 
     playerNameElem.innerHTML = player.name;
-    setGamePoints(); // 
+    // setGamePoints(); // This function has not been created yet
   }
 
 }
@@ -137,7 +137,7 @@ function checkRoundWinner(playerPick, computerPick) {
       }
 
  setGamePoints();
- endOfTheGame();
+ setTimeout(endOfTheGame, 1);
  
 
 }
@@ -150,8 +150,6 @@ function setGamePoints() {
    
 }
 
-//Zakończenie gry
-
 function endOfTheGame() {
   if (player.score == 10) {
     alert("The winner is " + player.name);
@@ -160,6 +158,8 @@ function endOfTheGame() {
     alert("Computer wins!");
     gameState ="ended";
   }
+  
+  
   
   setGameElements()
 }
